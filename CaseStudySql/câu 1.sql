@@ -24,6 +24,8 @@ insert into nhan_vien value(2,"Nguyễn Trung Kiên","1993/04/03","201649043",7.
 
 insert into nhan_vien value(3,"Đặng Hữu Dự","1993/04/03","201649043",7.00,"0903157020","giabao04031993@gmail.com","19 nguyễn đức cảnh",3,3,3);
 
+insert into nhan_vien value(4,"Nguyen Hoang Gia Bao","1993/04/03","201649043",7.00,"0903157020","giabao04031993@gmail.com","19 nguyễn đức cảnh",3,3,3);
+
 --  delete from nhan_vien where ma_nhan_vien;
 -- delete from vi_tri where ma_vi_tri;
 --  delete from trinh_do where ma_trinh_do;
