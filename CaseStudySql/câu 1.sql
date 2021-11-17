@@ -55,3 +55,20 @@ insert into kieu_thue value (4,'theo năm',50);
 insert into loai_dich_vu value (1,'Villa');
 insert into loai_dich_vu value (2,'House');
 insert into loai_dich_vu value (3,'Room');
+
+-- Nhập dữ liệu vào bảng dịch vụ:
+insert into dich_vu value(1,"villa1",50,50.00,7,2,1,"4 sao","không",10,3);
+insert into dich_vu value(2,"house1",40,20.00,4,1,2,"3 sao","không",null,2);
+insert into dich_vu value(3,"room1",20,10.00,2,3,3,null,null,null,null);
+insert into dich_vu value (4,'Villa2', 50, 500, 10, 3, 1, '5 sao','không', 30,2);
+insert into dich_vu value (5,'House2', 40, 200, 5, 2, 2, '3 sao','không',null,1);
+insert into dich_vu value (6,'Room2', 10, 100, 3, 1, 3, null,null,null,null);
+
+-- Nhập dữ liệu vào bảng hợp đồng:
+insert into hop_dong value(1,"2020/04/03 14:00:00","2020/04/04 12:00:00",20,50,1,2,1);
+insert into hop_dong value(2,"2020/07/20 14:00:00","2020/07/20 22:00:00",15,40,2,1,2);
+insert into hop_dong value(3,"2020/05/20 14:00:00","2020/06/20 12:00:00",20,20,2,4,3);
+insert into hop_dong value (4,'2020/01/15 14:00:00','2020/02/15 12:00:00', 250, 50, 3, 1, 4);
+insert into hop_dong value (5,'2019/05/20 14:00:00','2020/05/21 12:00:00', 150, 40, 2, 3, 5);
+insert into hop_dong value (6,'2018/07/17 14:00:00','2018/07/18 12:00:00', 100, 10, 3, 5, 6);
+

@@ -5,4 +5,5 @@ from khach_hang
 join loai_khach on khach_hang.ma_loai_khach=loai_khach.ma_loai_khach
 join hop_dong on khach_hang.ma_khach_hang= hop_dong.ma_khach_hang
 where loai_khach.ten_loai_khach="Diamond"
-group by khach_hang.ma_khach_hang;
+group by khach_hang.ma_khach_hang
+order by count(khach_hang.ma_khach_hang);
