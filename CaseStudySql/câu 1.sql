@@ -44,6 +44,7 @@ insert into khach_hang value (2,1,'Trần Trung Trực','1989/09/19',0, '2051112
 insert into khach_hang value (3,2,'Hoàng Lan Anh','1988/01/15',1, '205333111','0905333111','lananh@gmail.com', 'Đà Nẵng');
 insert into khach_hang value (4,2,'Đặng Hữu Dự','1981/03/17',0, '205222333','0905222333','du@gmail.com', 'Hà Nội');
 insert into khach_hang value (5,1,'Mary','1981/03/17',0, '205222333','0905222333','mary@gmail.com', 'Hà Nội');
+insert into khach_hang value (6,2,'David','1988/01/15',1, '205333111','0905333111','david@gmail.com', 'Quảng Ngãi');
 
 -- Nhập dữ liệu vào bảng kiểu thuê:
 insert into kieu_thue value (1,'theo giờ',100);
@@ -71,4 +72,23 @@ insert into hop_dong value(3,"2020/05/20 14:00:00","2020/06/20 12:00:00",20,20,2
 insert into hop_dong value (4,'2020/01/15 14:00:00','2020/02/15 12:00:00', 250, 50, 3, 1, 4);
 insert into hop_dong value (5,'2019/05/20 14:00:00','2020/05/21 12:00:00', 150, 40, 2, 3, 5);
 insert into hop_dong value (6,'2018/07/17 14:00:00','2018/07/18 12:00:00', 100, 10, 3, 5, 6);
+insert into hop_dong value (7,"2019/10/20 14:00:00","2020/11/20 12:00:00",50,100,5,2,6);
+insert into hop_dong value (8,"2015/10/20 14:00:00","2015/11/20 12:00:00",50,100,5,6,3);
+insert into hop_dong value (9,"2015/10/20 14:00:00","2015/11/20 12:00:00",50,100,3,2,3);
+
+-- Nhập dữ liệu vào bảng dịch vụ đi kèm:
+insert into dich_vu_di_kem value (1,'massage', 10, 1, 'sẵn sàng');
+insert into dich_vu_di_kem value (2,'karaoke', 20, 1, 'sẵn sàng');
+insert into dich_vu_di_kem value (3,'thức ăn', 10, 1, 'sẵn sàng');
+insert into dich_vu_di_kem value (4,'nước uống', 5, 1, 'sẵn sàng');
+insert into dich_vu_di_kem value (5,'thuê xe di chuyển tham quan resort', 10, 1, 'sẵn sàng');
+
+-- Nhập dữ liệu vào bảng hợp đồng chi tiết:
+insert into hop_dong_chi_tiet value (1,5,1, 3);
+insert into hop_dong_chi_tiet value (2,5,3, 2);
+insert into hop_dong_chi_tiet value (3,5,4, 3);
+insert into hop_dong_chi_tiet value (4,6,2, 1);
+insert into hop_dong_chi_tiet value (5,6,5, 2);
+insert into hop_dong_chi_tiet value (6,6,4, 4);
+insert into hop_dong_chi_tiet value (7,7,4, 6);
 
