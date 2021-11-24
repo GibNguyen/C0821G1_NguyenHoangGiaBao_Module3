@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        .text{
+            background-color:red ;
+            color: white;
+            font-size: 60px;
+        }
+        .header{
+            font-size: 40px;
+            border-bottom: black solid;
+        }
+        .nav{
+            font-size: 30px;
+            border-bottom: black solid;
+        }
+        .section{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .aside{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .footer{
+            background-color: darkgrey;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class ="row">
+    <div class="col-12 header">
+        <p>VN<span class ="text">E</span>XPRESS</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 nav">
+        <span>Thời sự | Khoa học | Giải trí | Thể thao | Pháp luật | Giáo dục | Sức khỏe | Đời sống</span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-8 section">
+        <img src="pm-jica-jpeg-1637722727-8458-1637722735.jpg" width="100%" height="100%">
+        <span>Thủ tướng: Ưu tiên vốn ODA tăng năng lực y tế, cơ sở dự phòng</span>
+    </div>
+    <div class="col-4 aside">
+        <img src="chup-anh-doc.jpg" width="100%" height="100%">
+        <span>Chú chó thông minh tự tìm đường trở về nhà </span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 footer">
+        <p style="font-weight: bold">Đăng kí nhận tin</p>
+        <p>Thông tin thiết bị mới nhất, những hướng dẫn chụp ảnh thú vị, tin tức nóng hổi trong làng nhiếp ảnh.</p>
+        <p>.Thông tin của bạn được bảo mật và không spam.</p>
+        <p>.Bạn có thể hủy đăng ký bất cứ lúc nào (có nút hủy trong mỗi email).</p>
+    </div>
+</div>
+</body>
+</html>

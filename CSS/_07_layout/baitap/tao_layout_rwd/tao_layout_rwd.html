@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .menu {
+            background-color: black;
+            color: white;
+        }
+
+        .login {
+            background-color: black;
+            color: white;
+            text-align: right;
+        }
+
+        .leftside {
+            background-color: lightgray;
+            height: 100%;
+        }
+
+        .rightside {
+            background-color: lightgray;
+        }
+        .footer{
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+        .row_height{
+            height: 600px;
+        }
+        @media only screen and (max-width: 786px){
+            [class*= col-] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="row ">
+    <div class="col-10 menu">
+        <p>Logo | Home | About | Projects | Contact</p>
+    </div>
+    <div class="col-2 login">
+        <p>Login</p>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-2 leftside row_height">
+
+    </div>
+    <div class="col-8 midside">
+        <div class="row">
+            <div class="col-12">
+                <p style="font-weight: bold;font-size: 30px">Việt Nam</p>
+                <p>Lãnh thổ Việt Nam xuất hiện con người sinh sống sớm nhất từ thời đại đồ đá cũ. Lịch sử Việt Nam cổ
+                    đại bắt đầu với các nhà nước Văn Lang, Âu Lạc. Âu Lạc bị nhà Triệu từ phương Bắc thôn tính vào đầu
+                    thế kỷ thứ 2 TCN và sau đó là thời kỳ Bắc thuộc kéo dài hơn một thiên niên kỷ. Chế độ quân chủ độc
+                    lập được tái lập sau chiến thắng của Ngô Quyền trước nhà Nam Hán. Sự kiện này mở đường cho các triều
+                    đại độc lập kế tiếp và trong suốt giai đoạn lịch sử trung đại, quốc gia này tiếp tục giành chiến
+                    thắng trước các cuộc chiến tranh xâm lược từ phương Bắc và dần được mở rộng về phía nam. Thời kỳ Bắc
+                    thuộc cuối cùng kết thúc vào năm 1427 sau chiến thắng trước nhà Minh của nghĩa quân Lam Sơn.
+
+                    Sang đến thời kỳ cận đại, Việt Nam lần lượt trải qua các giai đoạn Pháp thuộc và Nhật thuộc. Sau khi
+                    Nhật Bản đầu hàng Đồng Minh, lãnh thổ Việt Nam - Liên bang Đông Dương được các cường quốc tạo điều
+                    kiện cho Pháp thu hồi. Kết thúc Thế chiến II, Việt Nam trải qua nhiều biến động với sự can thiệp
+                    trên danh nghĩa giải giáp quân đội Nhật Bản của các lực lượng Đồng Minh bao gồm Anh, Pháp (miền
+                    Nam), Trung Hoa Dân Quốc (miền Bắc). Nhà nước Việt Nam Dân chủ Cộng hòa ra đời khi Hồ Chí Minh tuyên
+                    bố độc lập vào năm 1945 sau thành công của Cách mạng Tháng Tám. Chính thể này chống lại Liên hiệp
+                    Pháp cùng Quốc gia Việt Nam trong Chiến tranh Đông Dương lần thứ nhất và giành chiến thắng. Sau năm
+                    1954, Việt Nam bị chia cắt thành hai vùng tập kết quân sự, lấy ranh giới là vĩ tuyến 17. Xung đột
+                    gia tăng dẫn tới Chiến tranh Việt Nam với sự can thiệp sâu rộng của Hoa Kỳ cùng đồng minh hỗ trợ cho
+                    chính thể Việt Nam Cộng hòa và kết thúc với chiến thắng của Việt Nam Dân chủ Cộng hòa/Cộng hòa Miền
+                    Nam Việt Nam cùng Mặt trận Dân tộc Giải phóng Miền Nam Việt Nam vào năm 1975.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p style="font-weight: bold;font-size: 30px">Test</p>
+                <p>au khi tái thống nhất, Việt Nam tiếp tục bị cô lập, gặp khó khăn về kinh tế, chính trị, ngoại giao
+                    sau sự sụp đổ và tan rã của đồng minh Liên Xô cùng Khối phía Đông, các lệnh trừng phạt, cấm vận từ
+                    phía Hoa Kỳ[9], xung đột tại Campuchia, biên giới giáp Trung Quốc và hậu quả của chính sách kinh tế
+                    bao cấp sau nhiều năm duy trì. Năm 1986, Đảng Cộng sản ban hành một loạt cải cách đổi mới, qua đó cơ
+                    bản chấm dứt, xóa bỏ bao cấp, tạo điều kiện cho Việt Nam hình thành kinh tế thị trường và hội nhập
+                    sâu rộng. Cải cách đổi mới kết hợp cùng quy mô dân số lớn đưa Việt Nam trở thành một trong những
+                    nước đang phát triển có tốc độ tăng trưởng kinh tế</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-2 rightside row_height">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 footer">
+        <p>Footer Text</p>
+    </div>
+
+</div>
+</body>
+</html>
