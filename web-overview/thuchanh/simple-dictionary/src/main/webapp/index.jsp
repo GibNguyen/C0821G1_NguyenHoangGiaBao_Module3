@@ -14,7 +14,7 @@
 </head>
 <body>
 <h2>Vietnamese Dictionary</h2>
-<form action="/translate" method="get">
+<form action="/translate" method="post">
   <input type="text" name="txtSearch" placeholder="Enter your word: "/>
   <input type = "submit" id = "submit" value = "Search"/>
   <button name="">calculator</button>

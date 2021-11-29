@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<form action="/calculator" method="get">
+<form action="/calculator" method="post">
     <label>Product Description</label><br>
     <input type="text" name="description"><br>
     <label>List Price</label><br>
