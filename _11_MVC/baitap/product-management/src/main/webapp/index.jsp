@@ -6,11 +6,26 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<h2>List Product</h2>
+<a href="/product_list?actionUser=create">Create new Product</a>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Producer</th>
+  </tr>
+  <c:forEach var="productObj" items="${productListServlet}" >
+  <tr>
+    <td><c:out value="${productObj.id}"/></td>
+    <td><c:out value="${productObj.name}"/></td>
+    <td><c:out value="${productObj.price}"/></td>
+    <td><c:out value="${productObj.description}"/></td>
+    <td><c:out value="${productObj.producer}"/></td>
+  </tr>
+  </c:forEach>
+</table>
+</body>
 </html>
