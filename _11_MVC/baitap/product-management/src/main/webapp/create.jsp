@@ -16,23 +16,23 @@
     <input type="hidden" name="actionUser" value="create">
     <div>ID: </div>
     <div>
-        <input type="text" name="id">
+        <input type="text" name="idCreate">
     </div>
     <div>Name: </div>
     <div>
-        <input type="text" name="name">
+        <input type="text" name="nameCreate">
     </div>
     <div>Price: </div>
     <div>
-        <input type="text" name="price">
+        <input type="text" name="priceCreate">
     </div>
     <div>Description: </div>
     <div>
-        <input type="text" name="description">
+        <input type="text" name="descriptionCreate">
     </div>
     <div>Producer: </div>
     <div>
-        <input type="text" name="producer">
+        <input type="text" name="producerCreate">
     </div>
     <div>
         <input type="submit" value="Create new">

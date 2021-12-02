@@ -24,5 +24,9 @@ public class ProductRepository implements IProductRepository {
     public void saveProduct(Product product) {
         productMap.put(product.getId(),product);
     }
+    @Override
+    public void removeProduct(Product product){
+        productMap.remove(product.getId());
+    }
 
 }

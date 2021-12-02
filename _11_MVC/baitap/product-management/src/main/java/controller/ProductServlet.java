@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "ProductServlet",urlPatterns = {"","/product_list"})
 public class ProductServlet extends HttpServlet {
@@ -21,7 +23,19 @@ public class ProductServlet extends HttpServlet {
         }
         switch (actionUser){
             case "create":
-                
+                this.createProduct(request,response);
+            case "edit":
+                editProduct(request,response);
+                break;
+            case "find":
+                List<Product> findList=new ArrayList<>();
+                for(Product product: this.productService.findAll()){
+                    if (Integer.parseInt(request.getParameter("idFind"))==product.getId()){
+                        findList.add(product);
+                        request.setAttribute("productListServlet",findList);
+                        request.getRequestDispatcher("index.jsp").forward(request,response);
+                    }
+                }
             default:
                 request.setAttribute("productListServlet",this.productService.findAll());
                 request.getRequestDispatcher("index.jsp").forward(request,response);
@@ -38,29 +52,51 @@ public class ProductServlet extends HttpServlet {
         switch (actionUser){
             case "create":
                 request.getRequestDispatcher("create.jsp").forward(request,response);
+                break;
+            case "delete":
+               deleteProduct(request,response);
+               break;
+            case "edit":
+                request.getRequestDispatcher("edit.jsp").forward(request,response);
+            case "find":
+                request.getRequestDispatcher("find.jsp").forward(request,response);
+                break;
             default:
                 request.setAttribute("productListServlet",this.productService.findAll());
                 request.getRequestDispatcher("index.jsp").forward(request,response);
         }
 
     }
-
-    private void createProduct(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("id"));
-        String name = request.getParameter("name");
-        double price= Double.parseDouble(request.getParameter("price"));
-        String description= request.getParameter("description");
-        String producer=request.getParameter("producer");
+    private void createProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("idCreate"));
+        String name = request.getParameter("nameCreate");
+        double price= Double.parseDouble(request.getParameter("priceCreate"));
+        String description= request.getParameter("descriptionCreate");
+        String producer=request.getParameter("producerCreate");
         Product product=new Product(id,name,price,description,producer);
         productService.saveProduct(product);
         request.setAttribute("productListServlet",this.productService.findAll());
-        try {
-            request.getRequestDispatcher("index.jsp").forward(request,response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+       request.getRequestDispatcher("index.jsp").forward(request,response);
+    }
+    private void deleteProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        for(Product product: this.productService.findAll()){
+            if (Integer.parseInt(request.getParameter("idDelete"))==product.getId()){
+                productService.removeProduct(product);
+                request.setAttribute("productListServlet",this.productService.findAll());
+                request.getRequestDispatcher("index.jsp").forward(request,response);
+            }
         }
-
+    }
+    private void editProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        for(Product product:this.productService.findAll()){
+            if(Integer.parseInt(request.getParameter("idEdit"))==product.getId()){
+                product.setName(request.getParameter("nameEdit"));
+                product.setPrice(Double.parseDouble(request.getParameter("priceEdit")));
+                product.setDescription(request.getParameter("descriptionEdit"));
+                product.setProducer(request.getParameter("producerEdit"));
+            }
+        }
+        request.setAttribute("productListServlet",this.productService.findAll());
+        request.getRequestDispatcher("index.jsp").forward(request,response);
     }
 }
