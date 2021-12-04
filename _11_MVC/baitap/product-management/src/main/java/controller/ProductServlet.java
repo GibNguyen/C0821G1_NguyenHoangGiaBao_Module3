@@ -89,12 +89,12 @@ public class ProductServlet extends HttpServlet {
     }
     private void editProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         for(Product product:this.productService.findAll()){
-            if(Integer.parseInt(request.getParameter("idEdit"))==product.getId()){
-                product.setName(request.getParameter("nameEdit"));
-                product.setPrice(Double.parseDouble(request.getParameter("priceEdit")));
-                product.setDescription(request.getParameter("descriptionEdit"));
-                product.setProducer(request.getParameter("producerEdit"));
-            }
+                if(Integer.parseInt(request.getParameter("idEdit"))==product.getId()){
+                    product.setName(request.getParameter("nameEdit"));
+                    product.setPrice(Double.parseDouble(request.getParameter("priceEdit")));
+                    product.setDescription(request.getParameter("descriptionEdit"));
+                    product.setProducer(request.getParameter("producerEdit"));
+                }
         }
         request.setAttribute("productListServlet",this.productService.findAll());
         request.getRequestDispatcher("index.jsp").forward(request,response);
