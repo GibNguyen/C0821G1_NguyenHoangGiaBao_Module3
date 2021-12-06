@@ -66,6 +66,16 @@ public class UserRepository implements IUserRepository {
                     "from users\n" +
                     "where country(?)");
             preparedStatement.setString(1,str);
+            ResultSet resultSet=preparedStatement.executeQuery();
+            User user=null;
+            while (resultSet.next()){
+                user=new User();
+                user.setId(Integer.parseInt(resultSet.getString("id")));
+                user.setName(resultSet.getString("name"));
+                user.setEmail(resultSet.getString("email"));
+                user.setCountry(resultSet.getString("country"));
+                findList.add(user);
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

@@ -12,11 +12,15 @@
 </head>
 <body>
 <h2>Find By Country</h2>
+<form method="post">
 <div>
+    <input type="hidden" name="actionUser" value="find">
     Enter the count try you want to find
 </div>
 <div>
-    <input type="button" name="countryFind">
+    <input type="text" name="countryFind">
+    <input type="submit" value="Find">
 </div>
+</form>
 </body>
 </html>
